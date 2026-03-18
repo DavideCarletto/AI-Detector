@@ -1,0 +1,10 @@
+stages:
+  preprocess:
+    cmd: uv run python -m src.data.preprocess
+    deps:
+    - data/external/ai-text-detection-pile.csv
+    - data/external/train_v2_drcat_02.csv
+    - data/raw/train_essays.csv
+    - src/data/preprocess.py
+    outs:
+    - data/processed.csv

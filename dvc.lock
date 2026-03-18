@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: uv run python -m src.data.preprocess
+    deps:
+    - path: data/external/ai-text-detection-pile.csv
+      hash: md5
+      md5: cf63704edc9e7849aa60aa6a6de8957c
+      size: 462025558
+    - path: data/external/train_v2_drcat_02.csv
+      hash: md5
+      md5: df3047e59f65015b0a68ece21de0e6e3
+      size: 101908038
+    - path: data/raw/train_essays.csv
+      hash: md5
+      md5: 6eb9bab16019d83c8b97cd8bee52b09a
+      size: 4399547
+    - path: src/data/preprocess.py
+      hash: md5
+      md5: c54dc706d7128dea2ddaac649244fcd4
+      size: 3733
+    outs:
+    - path: data/processed.csv
+      hash: md5
+      md5: 9a639e857d954aa99fc8afcc7d921ec6
+      size: 566331001

@@ -1,0 +1,13 @@
+paths:
+  data_raw: data/raw/
+  data_external: data/external/
+  models: models/
+  logs: logs/
+
+training:
+  device: cuda
+  seed: 42
+  num_workers: 4
+
+logging:
+  use_mlflow: true
