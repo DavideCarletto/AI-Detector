@@ -12,11 +12,11 @@ import csv
 
 external_path = cfg["paths"]["data_external"]
 raw_path = cfg["paths"]["data_raw"]
+merged_output_path = cfg["paths"]["data_processed"]
 hf_ds_name = "artem9k/ai-text-detection-pile"
 hf_ds_path = external_path+ hf_ds_name.split("/")[1] + ".csv"
 drcat_ds_path = external_path + "train_v2_drcat_02.csv"
 train_essays_path = raw_path + "train_essays.csv"
-merged_output_path = "data/processed.csv"
 
 def load_hf_dataset():
     if not os.path.exists(hf_ds_path):
@@ -77,7 +77,7 @@ def merge_ds():
         print("Final dataset:")
         print(final_df.head(1000))
         print(f"Human generated count: {len(final_df[final_df["generated"] == 0])},  AI generated count: {len(final_df[final_df["generated"] == 1])}")
-        final_df.to_csv(merged_output_path)
+        final_df.to_csv(merged_output_path, index=False)
         print(f"Final dataset saved! check {merged_output_path}")
     
     else:
