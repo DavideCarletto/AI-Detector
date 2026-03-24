@@ -1,6 +1,7 @@
 paths:
   data_raw: data/raw/
   data_external: data/external/
+  data_processed: data/processed.csv
   models: models/
   logs: logs/
 
