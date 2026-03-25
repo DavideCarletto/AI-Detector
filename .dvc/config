@@ -1,4 +1,6 @@
 [core]
-    remote = myremote
+    remote = s3_remote
 ['remote "myremote"']
     url = /tmp/dvcstore
+['remote "s3_remote"']
+    url = s3://davide-ml-workspace/ai-detector

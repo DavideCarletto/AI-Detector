@@ -1,2 +1,1 @@
-/baseline_model.joblib
-/tfidf_vectorizer.joblib
+/full_pipeline.joblib
